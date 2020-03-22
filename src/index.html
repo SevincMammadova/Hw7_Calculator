@@ -8,28 +8,25 @@
 </head>
 <body>
     <div class = "container">
-        
-            <input type = "text">
-       
-        <button> + </button>
-        <button>&#8722</button>
-        <button>&#215</button>
-        <button>&#247</button>
-        <button>AC</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>0</button>
-        <button>&#183</button>
-        <button>&#61</button>
+        <div class = "element input"><form name="form"><input type = "text" name="textview" readonly></form></div>
+        <div class="element number" onclick="insert('1')">1</div>
+        <div class="element number" onclick="insert('2')">2</div>
+        <div class="element number" onclick="insert('3')">3</div>
+        <div class="element signs" onclick="insert('+')"> +</div>
+        <div class="element number" onclick="insert('4')">4</div>
+        <div class="element number" onclick="insert('5')">5</div>
+        <div class="element number" onclick="insert('6')">6</div>
+        <div class="element signs" onclick="insert('-')">&#8722;</div>
+        <div class="element number" onclick="insert('7')">7</div>
+        <div class="element number" onclick="insert('8')">8</div>
+        <div class="element number" onclick="insert('9')">9</div>
+        <div class="element signs" onclick="insert('&#10006;')">&#10006;</div>
+        <div class="element clear" onclick="clear()"> AC </div>
+        <div class="element number" onclick="insert('0')">0</div>
+        <div class="element equal" >&#61;</div>
+        <div class="element signs" onclick="insert('&divide')">&divide;</div>
     </div>
 
-
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
