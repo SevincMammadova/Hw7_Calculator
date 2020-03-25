@@ -1,53 +1,48 @@
 body {
     background-image: url(./image/thumb_l_psh_00006189.jpg);
     border: 100px;
-    padding: 100px;
+    padding: 200px;
     user-select: none;
 }
+
 .container {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 4px;
-    border-radius: 10px;
-    background-color:darkblue;
-    padding: 4px;
-    max-width: 360px;
-    max-height: 360px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    width: 380px;
+    height: 380px;
+    flex-wrap: wrap;
+    background-color: teal;
+    justify-content: space-evenly;
 }
 
-.element {
-    background-color:darkcyan;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+input {
+    width: 380px;
+    height: 60px;
+    border-radius: 20px;
+    padding: 10px;
     font-size: 20px;
 }
 
-form {
-    max-width: 100%;
-}
-input {
-    max-width: 100%;
-    max-height: 60px;
-    border: none;
-    font-size: 30px;
-}
-
-.input {
-    grid-column: 1/-1;
+button {
+    width: 90px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 40px;
 }
 
 .clear {
-    background-color: rgb(7, 99, 60);
-}
-.equal {
-    background-color: rgb(7, 99, 60);
+    background-color: darkcyan;
+    color: white;
+    font-size: 40px;
 }
 
-.signs {
+.equal {
     background-color: darkslategray;
+    font-size: 40px;
+    color: white;
+}
+
+.operation {
+    background-color: darkslategray;
+    color: white;
+    font-size: 40px;
 }

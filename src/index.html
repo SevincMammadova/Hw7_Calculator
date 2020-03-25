@@ -8,23 +8,23 @@
 </head>
 <body>
     <div class = "container">
-        <div class = "element input"><form name="form"><input type = "text" name="textview" readonly></form></div>
-        <div class="element number" onclick="insert('1')">1</div>
-        <div class="element number" onclick="insert('2')">2</div>
-        <div class="element number" onclick="insert('3')">3</div>
-        <div class="element signs" onclick="insert('+')"> +</div>
-        <div class="element number" onclick="insert('4')">4</div>
-        <div class="element number" onclick="insert('5')">5</div>
-        <div class="element number" onclick="insert('6')">6</div>
-        <div class="element signs" onclick="insert('-')">&#8722;</div>
-        <div class="element number" onclick="insert('7')">7</div>
-        <div class="element number" onclick="insert('8')">8</div>
-        <div class="element number" onclick="insert('9')">9</div>
-        <div class="element signs" onclick="insert('*')">&times;</div>
-        <div class="element clear" onclick="clean()"> AC </div>
-        <div class="element number" onclick="insert('0')">0</div>
-        <div class="element equal" onclick="equal()">&#61;</div>
-        <div class="element signs" onclick="insert('/')">&divide;</div>
+        <input type="text" readonly id="input">
+        <button class="button" onclick="insert('1')">1</button>
+        <button class="button" onclick="insert('2')">2</button>
+        <button class="button" onclick="insert('3')">3</button>
+        <button class="operation" onclick="insert('+')">+</button>
+        <button class="button" onclick="insert('4')">4</button>
+        <button class="button" onclick="insert('5')">5</button>
+        <button class="button" onclick="insert('6')">6</button>
+        <button class="operation" onclick="insert('-')">&#8722;</button>
+        <button class="button" onclick="insert('7')">7</button>
+        <button class="button" onclick="insert('8')">8</button>
+        <button class="button" onclick="insert('9')">9</button>
+        <button class="operation" onclick="insert('*')">&#215;</button>
+        <button class="clear" onclick="clean()">AC</button>
+        <button class="button" onclick="insert('0')">0</button>
+        <button class="equal" onclick="sum()">=</button>
+        <button class="operation" onclick="insert('/')">&#247;</button>
     </div>
 
 <script type="text/javascript" src="index.js"></script>
