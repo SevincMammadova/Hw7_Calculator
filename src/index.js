@@ -1,9 +1,24 @@
 let input = document.getElementById('input');
-let selOperator = document.getElementsByClassName('operation');
+let oldNum = document.querySelectorAll('.button');
+let curNum = document.querySelectorAll('.button');
+selOperator = document.getElementsByClassName('operation').value;
+
+// for (let i = 0; i < oldNum.length; i++) {
+//     if(!selOperator) {
+//        onclick.insert();
+//     }
+// }
+
+// for (let i = 0; i < curNum.length; i++) {
+//     if(!selOperator) {
+//         input.value += i;
+//     }
+// }
 
 function insert (num) {
    input.value += num;
 }
+
  function clean() {
      input.value = "";
  }
@@ -12,36 +27,43 @@ function operation (operator) {
     input.value += operator;
 }
 
-function equal(oldNum, curNum) {
-    oldNum = document.getElementsByClassName('num'.value);
-    curNum = document.getElementsByClassName('num'.value);
-    selOperator = document.getElementsByClassName('operation'.value);
-
-    function plus(){ 
-        if (selOperator == 'plus'){
-            result = oldNum + curNum;
+function plus(oldNum, curNum){ 
+    for (let i = 0; i < oldNum.length; i++) {
+        if(selOperator !== operation) {
+          insert();
         }
     }
- 
-    function minus () {
-        if (selOperator == 'minus') {
-            result = oldNum - curNum;
+    for (let i = 0; i < curNum.length; i++) {
+        if(selOperator !== operation) {
+            insert();
         }
     }
 
-    function multiply () {
-        if (selOperator == 'multiply') {
-            result = oldNum * curNum;
-        }
+    if (selOperator == 'plus'){
+        result = oldNum + curNum;
     }
+}
 
-
-    function devide () {
-        if (selOperator == 'devide') {
-            result = oldNum / curNum;
-        }
+function minus () {
+    if (selOperator == 'minus') {
+        result = oldNum - curNum;
     }
+}
 
+function multiply () {
+    if (selOperator == 'multiply') {
+        result = oldNum * curNum;
+    }
+}
+
+function devide () {
+    if (selOperator == 'devide') {
+        result = oldNum / curNum;
+    }
+}
+
+
+function equal() {
     switch(selOperator) {
 
         case "plus":
@@ -71,9 +93,9 @@ function equal(oldNum, curNum) {
 }
 
 
-module.exports = {
-   clean,
-   equal,
-   insert
-}
+// module.exports = {
+//    clean,
+//    equal,
+//    insert
+// }
 
