@@ -1,4 +1,5 @@
 let input = document.getElementById('input');
+let selOperator = document.getElementsByClassName('operation');
 
 function insert (num) {
    input.value += num;
@@ -7,32 +8,72 @@ function insert (num) {
      input.value = "";
  }
 
-//  function sum (num1, num2) {
-//     i
-//  }
+function operation (operator) {
+    input.value += operator;
+}
 
-// function insert(num) {
-//     document.form.textview.value += num;
-// }
+function equal(oldNum, curNum) {
+    oldNum = document.getElementsByClassName('num'.value);
+    curNum = document.getElementsByClassName('num'.value);
+    selOperator = document.getElementsByClassName('operation'.value);
 
-// function clean() {
-//     document.form.textview.value = "";
-// }
+    function plus(){ 
+        if (selOperator == 'plus'){
+            result = oldNum + curNum;
+        }
+    }
+ 
+    function minus () {
+        if (selOperator == 'minus') {
+            result = oldNum - curNum;
+        }
+    }
 
-// function equal() {
-//     let exp = document.form.textview.value;
+    function multiply () {
+        if (selOperator == 'multiply') {
+            result = oldNum * curNum;
+        }
+    }
 
-//     if (exp) {
-//         document.form.textview.value = eval(exp);
-//     }
-// }
 
-// console.log(equal());
+    function devide () {
+        if (selOperator == 'devide') {
+            result = oldNum / curNum;
+        }
+    }
 
-// module.exports = {
-//    clean,
-//    equal,
-//    insert
-// }
+    switch(selOperator) {
 
-console.log(input());
+        case "plus":
+            plus();
+            break;
+
+        case "minus":
+            minus();
+            break;
+
+        case "multiply":
+            multiply();
+            break;
+        
+        case "devide":
+            devide();
+            break;
+        default:
+            result = curNum;
+    }
+
+    input.value = result;
+    oldNum = 0;
+    curNum = result;
+    selOperator = null;
+   
+}
+
+
+module.exports = {
+   clean,
+   equal,
+   insert
+}
+
