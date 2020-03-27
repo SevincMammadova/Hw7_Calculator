@@ -1,16 +1,23 @@
 let input = document.getElementById('input');
 let oldNum = document.querySelectorAll('.button');
 let curNum = document.querySelectorAll('.button');
-selOperator = document.getElementsByClassName('operation').value;
+let selOperator = document.querySelectorAll('.operation');
+let equalEval = document.getElementById('equal');
 
-// for (let i = 0; i < oldNum.length; i++) {
-//     if(!selOperator) {
-//        onclick.insert();
-//     }
-// }
+for (let i = 0; i < oldNum.length; i++) {
+    if(!operator) {
+       onclick.insert();
+       oldNum = input.value;
+    }
+    if(!equalEval) {
+        onclick.insert();
+        oldNum = 0;
+        curNum = input.value;
+    }
+}
 
 // for (let i = 0; i < curNum.length; i++) {
-//     if(!selOperator) {
+//     if(!equalEval) {
 //         input.value += i;
 //     }
 // }
@@ -19,25 +26,15 @@ function insert (num) {
    input.value += num;
 }
 
- function clean() {
-     input.value = "";
- }
+function clean() {
+    input.value = "";
+}
 
 function operation (operator) {
     input.value += operator;
 }
 
 function plus(oldNum, curNum){ 
-    for (let i = 0; i < oldNum.length; i++) {
-        if(selOperator !== operation) {
-          insert();
-        }
-    }
-    for (let i = 0; i < curNum.length; i++) {
-        if(selOperator !== operation) {
-            insert();
-        }
-    }
 
     if (selOperator == 'plus'){
         result = oldNum + curNum;
@@ -86,9 +83,6 @@ function equal() {
     }
 
     input.value = result;
-    oldNum = 0;
-    curNum = result;
-    selOperator = null;
    
 }
 
