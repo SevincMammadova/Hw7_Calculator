@@ -1,29 +1,11 @@
-let input = document.getElementById('input');
-let oldNum = document.querySelectorAll('.button');
-let curNum = document.querySelectorAll('.button');
+let input = document.getElementById('display');
+let oldNum = document.querySelectorAll('.num');
+let curNum = false;
 let selOperator = document.querySelectorAll('.operation');
 let equalEval = document.getElementById('equal');
 
-for (let i = 0; i < oldNum.length; i++) {
-    if(!operator) {
-       onclick.insert();
-       oldNum = input.value;
-    }
-    if(!equalEval) {
-        onclick.insert();
-        oldNum = 0;
-        curNum = input.value;
-    }
-}
-
-// for (let i = 0; i < curNum.length; i++) {
-//     if(!equalEval) {
-//         input.value += i;
-//     }
-// }
-
 function insert (num) {
-   input.value += num;
+   input.value +=  num;
 }
 
 function clean() {
@@ -35,25 +17,24 @@ function operation (operator) {
 }
 
 function plus(oldNum, curNum){ 
-
     if (selOperator == 'plus'){
         result = oldNum + curNum;
     }
 }
 
-function minus () {
+function minus (oldNum, curNum) {
     if (selOperator == 'minus') {
         result = oldNum - curNum;
-    }
+    }  
 }
 
-function multiply () {
+function multiply (oldNum, curNum) {
     if (selOperator == 'multiply') {
         result = oldNum * curNum;
     }
 }
 
-function devide () {
+function devide (oldNum, curNum) {
     if (selOperator == 'devide') {
         result = oldNum / curNum;
     }
@@ -85,6 +66,7 @@ function equal() {
     input.value = result;
    
 }
+// console.log(oldNum);
 
 
 // module.exports = {
