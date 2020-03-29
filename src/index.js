@@ -1,70 +1,84 @@
-let input = document.getElementById('display');
-let oldNum = document.querySelectorAll('.num');
-let curNum = false;
-let selOperator = document.querySelectorAll('.operation');
-let equalEval = document.getElementById('equal');
-
-function insert (num) {
-   input.value +=  num;
-}
+let input = document.querySelector('input#display');
+let oldNum = '';
+let curNum = '';
+let selOperator = '';
+let result = 0; 
 
 function clean() {
     input.value = "";
 }
 
-function operation (operator) {
-    input.value += operator;
+function insert (num) {
+    input.value += num;
 }
 
-function plus(oldNum, curNum){ 
-    if (selOperator == 'plus'){
-        result = oldNum + curNum;
+function getOperator (operator) {
+    oldNum = input.value;
+    clean();
+
+    if(!oldNum) return;
+
+    selOperator = operator;
+}
+
+function checkOperation() {
+    curNum = input.value;
+    clean();
+
+    if(!curNum) {
+        oldNum = '';
+        selOperator = '';
+        return;
     }
+
+    equal();
 }
 
-function minus (oldNum, curNum) {
-    if (selOperator == 'minus') {
-        result = oldNum - curNum;
-    }  
+function plus(){ 
+    result = +oldNum + +curNum;
+    return result;
 }
 
-function multiply (oldNum, curNum) {
-    if (selOperator == 'multiply') {
-        result = oldNum * curNum;
-    }
+function minus () {
+    result = +oldNum - +curNum;
+    return result;
+
 }
 
-function devide (oldNum, curNum) {
-    if (selOperator == 'devide') {
-        result = oldNum / curNum;
-    }
+function multiply () {
+    result = +oldNum * +curNum;
+    return result;
+}
+
+function devide () {
+    result = +oldNum / +curNum;
+    return result;
 }
 
 
 function equal() {
     switch(selOperator) {
 
-        case "plus":
-            plus();
+        case "+":
+            result = plus();
             break;
 
-        case "minus":
-            minus();
+        case "-":
+            result = minus();
             break;
 
-        case "multiply":
-            multiply();
+        case "*":
+            result = multiply();
             break;
         
-        case "devide":
-            devide();
+        case "/":
+            result = devide();
             break;
         default:
-            result = curNum;
+            return;
     }
 
-    input.value = result;
-   
+    input.value = result; 
 }
 // console.log(oldNum);
 

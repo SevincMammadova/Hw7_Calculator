@@ -8,23 +8,23 @@
 </head>
 <body>
     <div class = "container">
-        <input type="text" readonly id="display" placeholder="insert the number">
+        <input type="text" readonly id="display"  value = "" >
         <button class="num" value="1" onclick="insert('1')">1</button>
         <button class="num" value="2" onclick="insert('2')">2</button>
         <button class="num" value="3" onclick="insert('3')">3</button>
-        <button class="operation"onclick="operation('+')" id="plus">+</button>
+        <button class="operation"onclick="getOperator('+')" >+</button>
         <button class="num" value="4" onclick="insert('4')">4</button>
         <button class="num" value="5" onclick="insert('5')">5</button>
         <button class="num" value="6" onclick="insert('6')">6</button>
-        <button class="operation" onclick="operation('-')" id="minus">&#8722;</button>
+        <button class="operation" onclick="getOperator('-')" >&#8722;</button>
         <button class="num" value="7" onclick="insert('7')">7</button>
         <button class="num" value="8" onclick="insert('8')">8</button>
         <button class="num" value="9" onclick="insert('9')">9</button>
-        <button class="operation" onclick="operation('*')" id="multiply">&#215;</button>
+        <button class="operation" onclick="getOperator('*')" >&#215;</button>
         <button class="clear" onclick="clean()">AC</button>
-        <button class="button num" value="0" onclick="insert('0')">0</button>
-        <button class="equal" onclick="equal()" id="equal">=</button>
-        <button class="operation" onclick="operation('/')" id="devide">&#247;</button>
+        <button class="num" value="0" onclick="insert('0')">0</button>
+        <button class="equal" onclick="checkOperation()">=</button>
+        <button class="operation" onclick= "getOperator('/')" >&#247;</button>
     </div>
 
 <script type="text/javascript" src="index.js"></script>
