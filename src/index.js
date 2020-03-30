@@ -31,7 +31,7 @@ function checkOperation() {
         return;
     }
 
-    equal();
+    getEqual();
 }
 
 function plus(){ 
@@ -56,7 +56,7 @@ function devide () {
 }
 
 
-function equal() {
+function getEqual() {
     switch(selOperator) {
 
         case "+":
@@ -89,6 +89,7 @@ module.exports = {
    multiply,
    devide,
    getOperator,
-   checkOperation
+   checkOperation,
+   getEqual
 }
 
