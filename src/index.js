@@ -15,7 +15,7 @@ function insert (num) {
 function getOperator (operator) {
     oldNum = input.value;
     clean();
-
+    
     if(!oldNum) return;
 
     selOperator = operator;
@@ -80,12 +80,15 @@ function equal() {
 
     input.value = result; 
 }
-// console.log(oldNum);
 
-
-// module.exports = {
-//    clean,
-//    equal,
-//    insert
-// }
+module.exports = {
+   clean,
+   insert, 
+   plus,
+   minus,
+   multiply,
+   devide,
+   getOperator,
+   checkOperation
+}
 
