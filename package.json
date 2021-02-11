@@ -1,0 +1,26 @@
+{
+  "name": "hw7_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./src/test/index.test.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevincMammadova/Hw7_Calculator.git"
+  },
+  "keywords": [
+    "Calculator"
+  ],
+  "author": "Mammadova Sevinc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SevincMammadova/Hw7_Calculator/issues"
+  },
+  "homepage": "https://github.com/SevincMammadova/Hw7_Calculator#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  }
+}

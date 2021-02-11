@@ -1,0 +1,48 @@
+body {
+    background-image: url(./image/thumb_l_psh_00006189.jpg);
+    border: 100px;
+    padding: 200px;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    width: 380px;
+    height: 380px;
+    flex-wrap: wrap;
+    background-color: teal;
+    justify-content: space-evenly;
+}
+
+input {
+    width: 380px;
+    height: 60px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+button {
+    width: 90px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.clear {
+    background-color: darkcyan;
+    color: white;
+    font-size: 40px;
+}
+
+.equal {
+    background-color: darkslategray;
+    font-size: 40px;
+    color: white;
+}
+
+.operation {
+    background-color: darkslategray;
+    color: white;
+    font-size: 40px;
+}
